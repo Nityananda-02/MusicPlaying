@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap');
+
+
+/* ================= GENERAL ================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    background-color: antiquewhite;
+
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+
+    font-family: "Roboto Slab", serif;
+
+}
+
+
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    list-style-type: none;
+
+    height: 65px;
+
+    background-color: black;
+
+    color: white;
+
+}
+
+
+nav ul li {
+
+    padding: 0 12px;
+
+    cursor: pointer;
+
+}
+
+
+.music1 {
+
+    display: flex;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    font-size: 1.3rem;
+
+}
+
+
+.music1 img {
+
+    width: 44px;
+
+    height: 44px;
+
+    object-fit: contain;
+
+    margin-right: 8px;
+
+}
+
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+
+    min-height: 72vh;
+
+    width: 70%;
+
+    margin: 23px auto;
+
+    padding: 34px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    color: white;
+
+    background-color: black;
+
+    background-image: url("bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.SongList {
+
+    width: 100%;
+
+}
+
+
+.SongList h1 {
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* ================= SONG LIST ================= */
+
+.songItemContainer {
+
+    margin-top: 50px;
+
+}
+
+
+.songItem {
+
+    width: 100%;
+
+    height: 55px;
+
+    margin: 12px 0;
+
+    padding: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: white;
+
+    color: black;
+
+    border-radius: 35px;
+
+}
+
+
+.songItem img {
+
+    width: 45px;
+
+    height: 45px;
+
+    margin: 0 15px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+.songName {
+
+    flex: 1;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.songlistplay {
+
+    margin-left: auto;
+
+}
+
+
+.timestamp {
+
+    margin-right: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+}
+
+
+.songItemPlay {
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+.songItemPlay:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+
+/* ================= BOTTOM PLAYER ================= */
+
+.bottom {
+
+    position: sticky;
+
+    bottom: 0;
+
+    height: 130px;
+
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+
+#myProgressBar {
+
+    width: 70%;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================= PLAYER ICONS ================= */
+
+.icons {
+
+    margin-top: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.icons i {
+
+    cursor: pointer;
+
+}
+
+
+.icons i:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+
+/* ================= SONG INFO ================= */
+
+.songInfo {
+
+    position: absolute;
+
+    left: 10vw;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.songInfo img {
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease-in;
+
+}
+
+
+
+/* ================= TABLET ================= */
+
+@media only screen and (max-width: 1100px) {
+
+    .container {
+
+        width: 90%;
+
+    }
+
+    #myProgressBar {
+
+        width: 80%;
+
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+
+        width: 95%;
+
+        padding: 15px;
+
+    }
+
+
+    .SongList h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .songItem {
+
+        height: 50px;
+
+    }
+
+
+    .songItem img {
+
+        width: 38px;
+
+        height: 38px;
+
+        margin: 0 10px;
+
+    }
+
+
+    .songName {
+
+        font-size: 12px;
+
+    }
+
+
+    .timestamp {
+
+        margin-right: 10px;
+
+        font-size: 11px;
+
+    }
+
+
+    .icons {
+
+        gap: 20px;
+
+    }
+
+
+    .songInfo {
+
+        position: static;
+
+        margin-top: 5px;
+
+        font-size: 11px;
+
+    }
+
+}
